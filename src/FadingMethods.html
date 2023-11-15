@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Methods</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#fadei").click(function(){
+                $("#fin1").fadeIn();
+                $("#fin2").fadeIn("slow");
+                $("#fin3").fadeIn(1000);
+            });
+            $("#fadeo").click(function(){
+                $("#fin1").fadeOut();
+                $("#fin2").fadeOut("slow");
+                $("#fin3").fadeOut(2000);
+            });
+            $("#fadet").click(function(){
+                $("#fin1").fadeToggle();
+                $("#fin2").fadeToggle("slow");
+                $("#fin3").fadeToggle(3000);
+            });
+            $("#fadeto").click(function(){
+                $("fin1").fadeTo("slow",0,8);
+                $("#fin2").fadeTo("fast",0.5);
+                $("#fin3").fadeTo("slow",0.2);
+            });
+            $("#slide").hover(function(){
+                $("#hslide").slideUp();
+            });
+            $("#slide").dblclick(function(){
+                $("#hslide").slideToggle();
+            });
+            $("#slide").click(function(){
+                $("#hslide").slideDown();
+            });
+            $("#an").click(function(){
+                $("#ani").animate({left:'600px'},5000).animate({fontSize:'4em'},'slow');
+            });
+            $("#stp").click(function(){
+                $("#ani").stop();
+            });
+            $("#l").click(function(){
+                $("#sd").css("color","red")
+                    .slideUp(5000)
+                    .slideDown(5000)
+                    .slideUp(1000);
+            });
+        });
+    </script>
+    <style>
+        body{
+            background-color: black;
+            color: aliceblue;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+        p{
+            font-size: 24px;
+            font-family: 'Courier New', Courier, monospace;
+            display: inline-block;
+        }
+        button{
+            width: 150px;
+            height: 50px;
+            background-color: crimson;
+            color: aliceblue;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            border-color: crimson;
+            display: inline-block;
+        }
+        #slide, #hslide{
+            text-align: center;
+            background-color: crimson;
+            color: aliceblue;
+            padding: 15px;
+            width: 500px;
+            border-radius: 0.5px;
+        }
+        div{
+            padding: 25px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+      <div>
+        <h1>JQuery Effects</h1>
+        <div id="fin1" style="width: 150px;display:none;height:50px;background-color: rgb(194, 19, 19);"></div>
+        <br>
+        <div id="fin2" style="width:150px;display:none;height: 50px;background-color: crimson;"></div>
+        <br>
+        <div id="fin3" style="width:150px;display:none;height: 50px;background-color: aquamarine;"></div>
+        <br><br>
+        <p>FadeIn()</p>
+        <button id="fadei">Click to FadeIn</button>
+        <p>Fadeout()</p>
+        <button id="fadeo">Click to FadeOut</button>
+        <p>FadeToggle()</p>
+        <button id="fadet">Click to Toggle</button>
+        <p>FadeTo()</p>
+        <button id="fadeto">Change Opacity</button>
+      </div>
+      
+      <div>
+        <div id="slide"> Pannel Hover to Up, Click to Down and DoubleClick to Toggle</div>
+        <div id="hslide">Hidden Words</div>
+      </div>
+      <div id="ani" style="color:black;font-family: 'Courier New', Courier, monospace;background-color:crimson;border-radius: 5px; height: 150px; width: 300px;position: absolute;vertical-align: top;text-align: left;">Phantom</div>
+        <p>Animate</p><br>
+        <button id="an">Click to Animate</button>
+      </div>
+      <div>
+        <br>
+        <br>
+        <p>Stop</p><br>
+        <button id="stp">Click to Stop</button>
+      </div>
+      <div>
+        <p id="sd">Fléctere si néqueo súperos Acheronta movebo.</p>
+        <br>
+        <button id="l">Hit me</button>
+      </div>
+    </center>
+</body>
+</html>

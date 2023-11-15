@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>If Else </title>
+</head>
+<script type="text/javascript">
+	function eqc(){
+		let x=prompt("Enter a number ",0);
+		if(x>0){
+			alert(1);
+		}
+		else if(x<0){
+			alert(-1);
+		}
+		else {
+			alert(0);
+		}
+
+	}
+	function qu(){
+		let a=prompt("Enter a value ",9);
+		let b=prompt("Enter b value",0);
+		let x=(a+b <4 ) ? "Below  4":"Above"; 
+		alert(x);
+	}
+	function ife(){
+		let x=prompt("Enter Employee/Director: ");
+		let out= (x=="Employee") ? "Hello" : (x=="Director") ? "Greetings": (x=="") ? "No Login !":'';
+		alert(out);
+
+	}
+</script>
+<body>
+	<input type="button" value="Equality checker" onclick="eqc()">
+	<input type="button" value="Greater than 4 " onclick="qu()">
+	<input type="button" value="Login checker " onclick="ife()">
+</body>
+</html>

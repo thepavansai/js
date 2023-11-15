@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JQuery Click.html</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $(".cli").click(function(){
+      $(".cli").hide();
+    });
+    $(".sho").click(function(){
+      $("p").show();
+    });
+    $(".speed").click(function(){
+      $(".speed").hide(900);
+    });
+    $(".fast").click(function(){
+      $(".fast").hide(10);
+    });
+    $("#di").dblclick(function(){
+      $("p").show(999);
+    });
+  });
+</script>
+</head>
+<body>
+
+<p class="cli">If you click on me, I will disappear.</p>
+<br><br>
+<p class="speed"\>Click to Disappear slowly</p>
+<br><br>
+<div id="di">
+  <p>Double Clicking this makes Appear Slowly !!</p>
+</div>
+<br><br>
+<p class="fast">Fast Disappear</p>
+<br><br>
+<p class="sho">Click to show all</p>
+</body>
+</html>

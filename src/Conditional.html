@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Switch Case to If and Vice Versa </title>
+	<script type="text/javascript">
+	function cale(){
+		let br=prompt("Enter a Browser name: ");
+		if(br=='Edge'){
+			alert("You've got the Edge ");
+		}
+		else if(br=='Chrome'|| br=='FireFox' || br=='Safari'|| br=='Opera'){
+			alert("Okay We do support these");
+		}
+		else{
+			alert("We hope Page is ok");
+		}
+	}
+	function reto(){
+		let a= +prompt("a? ",'');
+		switch(a){
+		case 0:
+			alert(0);
+			break;
+		case 1:
+			alert(1);
+			break;
+		case 2:
+		case 3:
+			alert("2,3");
+			break;
+		default:
+			alert("Input greater than 3");
+		}
+
+	}
+</script>
+</head>
+<body>
+	
+	<input type="button" value="Switch to If " onclick="cale()">
+	<input type="button" value="If to Switch " onclick="reto()">
+</body>
+</html>

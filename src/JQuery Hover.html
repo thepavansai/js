@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JQuery Hover</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $(".cli").click(function(){
+      $(this).hide();
+    });
+    $("div").dblclick(function(){
+      $("p").hide();
+    });
+    $(".enter").mouseenter(function(){
+      $(this).hide();
+    });
+   $(".cli").mousedown(function(){
+      alert("Mouse Down over the Firstline");
+   });
+   
+    $(".ho").hover(function(){
+      alert("Entered the 'Hover on this'");
+    },function(){
+      alert("Leaving Soon ");
+    });
+    $(".br").blur(function(){
+      $(this).css("background-color","#000000");
+    });
+    $(".sho").click(function(){
+      $("p").show();
+    });
+  });
+</script>
+</head>
+<body>
+
+<p class="cli">If you click on me, I will disappear.</p>
+<br><br>
+<p class="enter">Enter on this to go away!</p>
+<br><br>
+<div>
+  <p>Double Clicking this makes everthing disappear !!</p>
+</div>
+<br><br>
+<p class="ho">Hover on this </p>
+<br><br>
+</body>
+</html>
